@@ -12,8 +12,8 @@ Prezi](http://prezi.com/tcks6siw8q-u/introduction-a-la-gestion-des-bases-de-donn
 
 ## Ressources utiles
 
-- [DuckDB Reference
-  Manual](https://duckdb.org/docs/current/)
+- [DuckDB Reference Manual](https://duckdb.org/docs/current/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html)
 
 
 ## Accéder à DuckDB
@@ -593,29 +593,60 @@ BY a.lake_id) d;
 ```
 </details> 
 
+## Exercice 9 - Travailler avec des fichiers locaux ou à distance
+
+
+On va créer une VIEW Pour se connecter au fichier d'observation dans l'Atlas de Biodiversité Québec
+
+``` sql
+INSTALL spatial;
+LOAD spatial;
+INSTALL httpfs;
+LOAD httpfs;
+```
+
+
+``` sql
+CREATE OR REPLACE VIEW atlas AS SELECT * FROM read_parquet('https://object-arbutus.cloud.computecanada.ca/bq-io/atlas/parquet/atlas_public_2026-05-04.parquet');
+```
+
+```sql
+DESCRIBE atlas;
+``
+
+Extraire le nombre d'observations dans Atlas par royaume. 
+```sql
+SELECT kingdom, count(*) cnt FROM atlas GROUP BY kingdom ORDER BY cnt DESC;
+```
+
+Extraire toutes les observations d'harfang des neigs
+```sql
+SELECT * FROM atlas WHERE valid_scientific_name='Bubo scandiacus';
+```
+
 
 # Lier R avec DuckDB
 
 Dans R: lors de la première utilisation seulement :
 
-``` r
+```r
 install.packages('duckdb')
 ```
 
-``` r
+```r
 library(duckdb)
 con <- dbConnect(duckdb::duckdb(), dbdir = "mydb.duckdb")
 lakes <- dbGetQuery(con,'SELECT * FROM lakes');
 ```
 
-``` r
+```r
 lakesqc <- dbGetQuery(con,"SELECT * FROM lakes WHERE province='QUEBEC'")
 hist(lakes$tmean_an)
 ```
 
 ## Utiliser le package dplyr/dbdplyr
 
-``` r
+```r
 lakes <- tbl(con, "lakes") # Define lakes table
 lakes_qc<-filter(lakes, province  == 'QUEBEC') # Select lakes in Quebec
 prov_tmean<-summarise(group_by(lakes, province), mean(tmean_an)) # Mean annual temperature per province
@@ -623,6 +654,22 @@ prov_tmean=collect(prov_tmean) # Transfer result to standard R data frame
 lakes_qc2<-tbl(con, sql("SELECT * FROM lakes WHERE province='QUEBEC'")) #Perform any SQL statement
 ```
 
+## Charger une table comme un objet spatial sf
+
+```r
+install.packages('duckspatial')
+library(duckspatial)
+library(sf)
+```
+
+```r
+bubo <- ddbs_read_table(conn, "atlas", clauses = "WHERE valid_scientific_name='Bubo scandiacus'")
+```
+
+bubo est un objet spatial sf. Vous pouvez donc le visualiser sur une carte. 
+```r 
+plot(bubo['dataset_name'])
+```
 
 # Utilisation de l'interface LibreOffice Base
 
