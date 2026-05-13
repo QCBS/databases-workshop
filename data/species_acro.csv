@@ -1,0 +1,84 @@
+species_id,full_name,short_name
+1,"Acanthodiaptomus denticornis (Wierzejski, 1887) ",Acan_dent
+2,"Acanthocyclops vernalis (Fischer, 1853)",Acan_vern
+3,"Bosmina (Bosmina) longirostris (O.F. Müller, 1776)",Bosm_long
+4,"Cyclops abyssorum  G.O. Sars, 1863",Cycl_abys
+5,"Acanthocyclops capillatus (G.O. Sars, 1863)",Acan_capi
+6,"Ceriodaphnia affinis Lilljeborg, 1900",Ceri_affi
+7,"Ceriodaphnia lacustris Birge, 1893",Ceri_lacu
+8,"Ceriodaphnia quadrangula  O.F. Müller, 1785",Ceri_quad
+9,"Ceriodaphnia reticulata (Jurine, 1820)",Ceri_reti
+10,"Chydorus sphaericus (O.F. Müller, 1785)Chydorus sphaericus",Chyd_spha
+11,"Megacyclops magnus (Marsh, 1920)",Mega_magn
+12,"Cyclops scutifer scutifer G.O. Sars, 1863",Cycl_scut
+13,"Cyclops vicinus Ulianine, 1875",Cycl_vici
+14,"Daphnia ambigua Scourfield, 1947",Daph_ambi
+15,"Daphnia catawba Coker, 1926",Daph_cata
+16,"Daphnia dubia Herick, 1883",Daph_dubi
+17,"Daphnia galeata Sars, 1864",Daph_gale
+18,"Daphnia mendotae Birge, 1918",Daph_mend
+19,Daphnia longispina hyalina ceresiana,Daph_long_hyal_cere
+20,Daphnia longispina hyalina microcephela,Daph_long_hyal_micro
+21,"Daphnia longiremis G. O. Sars, 1862",Daph_longiremis
+22,"Daphnia magna Straus, 1820",Daph_magn
+23,"Daphnia middendorffiana Fischer, 1851",Daph_midd
+24,"Daphnia parvula Fordyce, 1901",Daph_parv
+25,"Daphnia  pulex Leydig, 1860",Daph_pul
+26,"Hesperodiaptomus arcticus (Marsh, 1920)",Hesp_arct
+27,"Daphnia retrocurva Forbes, 1882",Daph_retr
+28,"Daphnia rosea G.O. Sars, 1862",Daph_rose
+29,"Daphnia pulicaria Forbes, 1893",Daph_puli
+30,"Leptodiaptomus ashlandi (Marsh, 1893)",Lept_ashl
+31,"Daphnia  similis Claus, 1876",Daph_sim
+32,"Daphnia thorata  Forbes, 1893",Daph_thor
+33,"Arctodiaptomus (Rhabdodiaptomus) bacillifer bacillifer (Koelbel, 1885)",Arct_baci
+34,Diaphanasoma brachyurum,Diap_brac
+35,"Diacyclops thomasi (Forbes, 1882)",Diac_thom
+36,"Aglaodiaptomus clavipes (Schacht, 1897)",Agla_clav
+37,"Leptodiaptomus connexus (Light, 1938)",Lept_conn
+38,"Hesperodiaptomus eiseni (Lilljeborg, 1889)",Hesp_eise
+39,"Aglaodiaptomus forbesi Light, 1938",Agla_forb
+40,"Hesperodiaptomus franciscanus (Lilljeborg, 1889)",Hesp_fran
+41,"Diaphanosoma leuchtenbergianum Fischer, 1850",Diap_leuc
+42,"Hesperodiaptomus kenai Wilson, 1953",Hesp_kena
+43,"Aglaodiaptomus leptopus (Forbes, 1882)",Agla_lept
+44,"Leptodiaptomus minutus (Lilljeborg, 1889)",Lept_minu
+45,"Hesperodiaptomus nevadensis (Light, 1938)",Hesp_neva
+46,"Leptodiaptomus nudus (Lilljeborg, 1889)",Lept_nudu
+47,"Skistodiaptomus oregonensis (Lilljeborg, 1889)",Skis_oreg
+48,"Leptodiaptomus angustilobus (G.O. Sars, 1898)",Lept_angu
+49,"Skistodiaptomus pygmaeus (Pearse, 1906)",Skis_pygm
+50,"Skistodiaptomus reighardi (Marsh, 1895)",Skis_reig
+51,"Leptodiaptomus sicilis (Forbes, 1882)",Lept_sici
+52,"Leptodiaptomus siciloides (Lilljeborg, 1889)",Lept_sici
+53,"Aglaodiaptomus spatulocrenatus (Pearse, 1906)",Agla_spat
+54,"Leptodiaptomus tyrrelli (Poppe, 1888)",Lept_tyrr
+55,"Hesperodiaptomus wilsonae (Reed, 1958)",Hesp_wils
+56,"Eubosmina (Eubosmina) longispina (Leydig, 1860)",Eubo_long
+57,"Eubosmina (Neobosmina) tubicen (Brehm, 1953)",Eubo_tubi
+58,"Eucyclops agilis (Koch, 1838) sensu  Yeatman, 1959*",Eucy_agil
+59,"Eucyclops serrulatus (Fischer, 1851) sensu Yeatman, 1959*",Eucy_serr
+60,"Eucyclops speratus (Lilljeborg, 1901) sensu Yeatman, 1959**Eucyclops speratus",Eucy_sper
+61,"Epischura (Epischura) lacustris Forbes, 1882",Epis_lacu
+62,"Epischura (Epischura) nevadensis Lilljeborg, 1889",Epis_neva
+63,"Epischura (Epischura) nordenskioeldi Lilljeborg, 1889",Epis_nord
+64,"Eurytemora affinis (Poppe, 1880)",Eury_affi
+65,"Eurytemora canadensis Marsh, 1920",Eury_cana
+66,"Eurytemora composita Keiser, 1929",Eury_comp
+67,"Eubosmina (Eubosmina) coregoni Baird, 1857",Eubo_core
+68,"Heterocope septentrionalis Juday & Muttkowski, 1915",Hete_sept
+69,Holopedium gibberum,Holo_gibb
+70,Leptodora kindtii,Lept_kind
+71,"Limnocalanus johanseni Marsh, 1920",Limn_joha
+72,"Limnocalanus macrurus G.O. Sars, 1863",Limn_macr
+73,"Macrocyclops albidus (Jurine, 1820)",Macr_albi
+74,"Mesocyclops edax (S.A. Forbes, 1891)",Meso_edax
+75,"Mesocyclops americanus Dussart, 1985",Meso_amer
+76,Moina hutchinsoni,Moin_hutc
+77,"Orthocyclops modestus (Herrick, 1883)",Orth_mode
+78,Ophryoxus gracilis,Ophr_grac
+79,"Senecella calanoides Juday, 1923",Sene_cala
+80,"Tropocyclops prasinus mexicanus Kiefer, 1938",Trop_pras
+81,"Diacyclops nanus nanus (G.O. Sars, 1863)",Diac_nanu
+82,"Polyphemus pediculus (Linnaeus, 1761)",Poly_pedi
+83,"Sida crystallina (O.F. Müller, 1776)",Sida_crys
