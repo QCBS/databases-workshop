@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exercices_fr</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<h1
+id="introduction-à-la-gestion-des-bases-de-données-avec-des-logiciels-libres">Introduction
+à la gestion des bases de données avec des logiciels libres</h1>
+<p>Atelier offert par <a
+href="http://qcbs.ca/fr/ressources/professionnel-de-recherche/professionnels-de-recherche-guillaume-larocque-phd/">Guillaume
+Larocque</a>, professionnel de recherche au CSBQ.</p>
+<h2 id="presentation">Presentation</h2>
+<p><a
+href="http://prezi.com/tcks6siw8q-u/introduction-a-la-gestion-des-bases-de-donnees-avec-des-logiciels-libres/">Lien
+vers la présentation Prezi</a></p>
+<h2 id="ressources-utiles">Ressources utiles</h2>
+<ul>
+<li><a href="https://duckdb.org/docs/current/">DuckDB Reference
+Manual</a></li>
+<li><a
+href="https://www.postgresql.org/docs/current/index.html">PostgreSQL
+Documentation</a></li>
+</ul>
+<h2 id="accéder-à-duckdb">Accéder à DuckDB</h2>
+<p><strong>Sur Windows et Mac</strong>:</p>
+<ul>
+<li>Trouvez le fichier executable (duckdb.exe) sur votre ordinateur et
+cliquez dessus.</li>
+</ul>
+<p>Cette approche va utiliser une base de données temporaire qui sera
+effacée quand vous quitterez DuckDB.</p>
+<p>Pour créer une base de données persistante. Trouvez le terminal
+(Powershell) dans votre liste d’applications. Allez vers le dossier dans
+lequel vous avez extrait duckdb.exe.</p>
+<pre><code>cd c://Users/MyUser/Downloads/duckdb/</code></pre>
+<p>Ensuite</p>
+<pre><code>duckdb.exe mydb.duckdb</code></pre>
+<p><strong>Sur Linux</strong> Tapez simplement:</p>
+<pre><code>duckdb mydb.duckdb</code></pre>
+<p>dans un terminal.</p>
+<h1 id="discussion-de-groupe">Discussion de groupe</h1>
+<p><a
+href="http://qcbs.ca/wp-content/uploads/2012/10/Crustacean_plankton_Canada.ods">Cliquez
+ici pour télécharger le jeu de données (feuille de calcul en format
+LibreOffice Calc)</a></p>
+<h1 id="exercices-duckdb">Exercices DuckDB</h1>
+<h2 id="commandes-de-base">Commandes de base</h2>
+<p>Voir la liste des tables:</p>
+<pre class="duckdb"><code>SHOW TABLES;</code></pre>
+<p>Voir les colonnes dans une table</p>
+<pre class="duckdb"><code>DESCRIBE nom_de_la_table;</code></pre>
+<p>Pour quitter DuckDB, faites CTRL-D sur votre clavier.</p>
+<h2 id="exercice-1---déclarations-create-et-insert">Exercice 1 -
+déclarations CREATE et INSERT</h2>
+<p>Formats de colonnes les plus communs</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 47%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>fonction</th>
+<th>description</th>
+<th>exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>int</td>
+<td>integer</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>decimal(,)</td>
+<td>decimal(longueur totale, nombre de décimales)</td>
+<td>122.52</td>
+</tr>
+<tr class="odd">
+<td>varchar()</td>
+<td>character(longueur maximale)</td>
+<td>‘hirondelle bicolore’</td>
+</tr>
+<tr class="even">
+<td>text</td>
+<td>texte d’une longueur non-définie</td>
+<td>‘Il était une fois une hirondelle…’</td>
+</tr>
+<tr class="odd">
+<td>timestamp</td>
+<td>date et heure</td>
+<td>‘2012-10-21 10:03:21’</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://duckdb.org/docs/current/sql/data_types/overview">Liste
+complète des type de données DuckDB.</a></p>
+<p>Créer la séquence pour la clé primaire</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">SEQUENCE</span> oiseaux_id_seq <span class="kw">START</span> <span class="dv">1</span>;</span></code></pre></div>
+<p>Créer la table</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> obs_oiseaux (obs_id <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">DEFAULT</span> nextval(<span class="st">&#39;oiseaux_id_seq&#39;</span>),</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>obs_time <span class="dt">timestamp</span>,espece text,nombre <span class="dt">integer</span>,lat <span class="dt">real</span>,<span class="ot">&quot;long&quot;</span> <span class="dt">real</span>);</span></code></pre></div>
+<p>Note: nous utilisons les doubles guillements “” pour marquer
+l’utilisation d’un mot réservé, d’un mot avec des caractères spéciaux ou
+des espaces dans le nom d’une table ou d’une colonne.</p>
+<p>Insérer une nouvelle ligne dans la table</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> obs_oiseaux (obs_time,espece,nombre,lat,<span class="ot">&quot;long&quot;</span>) <span class="kw">VALUES</span> (<span class="st">&#39;2012-06-19 12:31:16&#39;</span>,<span class="st">&#39;Sturnus vulgaris&#39;</span>,<span class="dv">40</span>,<span class="fl">45.3522</span>,<span class="op">-</span><span class="fl">73.7930</span>);</span></code></pre></div>
+<p>Notez que nous n’avons pas entré le champ obs_id puisqu’il est entré
+automatiquement avec le type de caractère SERIAL, tel que spécifié lors
+de la création de la table.</p>
+<p>Pour visualiser la table</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> obs_oiseaux;</span></code></pre></div>
+<p><strong>Question 1</strong> Reproduisez la table suivante dans
+DuckDB, nommez la ‘acteur’ et visualisez là dans DuckDB.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>prenom</th>
+<th>nom_de_famille</th>
+<th>date_naissance</th>
+<th>sexe</th>
+<th>grandeur</th>
+<th>marque_distinctive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bruce</td>
+<td>Willis</td>
+<td>1955-03-19</td>
+<td>M</td>
+<td>1.81</td>
+<td>Joue fréquemment des hommes qui souffrent d’une tragédie, ont perdu
+quelque chose, ou qui ont une crise de confiance ou de conscience.</td>
+</tr>
+<tr class="even">
+<td>Emma</td>
+<td>Watson</td>
+<td>1990-04-15</td>
+<td>F</td>
+<td>1.65</td>
+<td>Joue souvent des personnages littéraires.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: quand on entre du texte, il faut doubler les ’
+dans le texte (’’) pour éviter que DuckDB ne les utilise comme marqueur
+de fin de l’entrée texte.</p>
+<h2 id="exercice-2---importer-des-données-dans-duckdb">Exercice 2 -
+Importer des données dans DuckDB</h2>
+<p>Téléchargez les fichiers suivants sur votre ordinateur (utilisez le
+bouton de droite pour cliquer sur le lien… sauvergarder sous). <a
+href="./data/lakes.csv">Lakes.csv</a>, <a
+href="./data/species_acro.csv">species_acro.csv</a>, <a
+href="./data/lakes_species.csv">lakes_species.csv</a></p>
+<p>Sous Windows: copiez ces trois fichiers vers un dossier nommé
+‘bdlibre’ dans le répertoire C: (i.e. C:/bdlibre). Sous Mac ou Linux:
+copiez ces trois fichiers vers un dossier facilement accessible (e.g.
+/home/votrenome/bdlibre). Modifiez les commandes plus bas en remplaçant
+“C:/bdlibre” avec le chemin vers ce dossier.</p>
+<p>Créer une table contenant l’information environnementale de chaque
+lac. - <strong>Lakes</strong>.</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">SEQUENCE</span> lakes_id_seq <span class="kw">START</span> <span class="dv">1</span>;</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> lakes (lake_id <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">DEFAULT</span> nextval(<span class="st">&#39;lakes_id_seq&#39;</span>),numero <span class="dt">INT</span>, lake_name text, </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>province text, latitude <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">5</span>),longitude <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">5</span>), number_of_species <span class="dt">INT</span>, ecoprov <span class="dt">VARCHAR</span>(<span class="dv">50</span>), </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ecozone <span class="dt">VARCHAR</span>(<span class="dv">50</span>), gss <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>),gse <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), gsl <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), gdd10 <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), egdd <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>mean_ele <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), pe_ann_p <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), totp_ann <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), srann_me <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), shann_me <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>tmax_ann <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), tmean_an <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>), vpann_me <span class="dt">DEC</span>(<span class="dv">10</span>,<span class="dv">2</span>));</span></code></pre></div>
+<p>Charger le fichier CSV dans cette table.</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> lakes <span class="kw">FROM</span> <span class="st">&#39;./data/lakes.csv&#39;</span> <span class="kw">WITH</span> csv <span class="kw">HEADER</span> DELIMITER <span class="kw">AS</span> <span class="st">&#39;,&#39;</span>;</span></code></pre></div>
+<p>Créez la table contentant les présences de espèces pour chaque lac et
+charger le fichier CSV dans cette table.-
+<strong>lakes_species</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> lakes_species (lake_id <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span>, species_id <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span>);</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> lakes_species <span class="kw">FROM</span> <span class="st">&#39;./data/lakes_species.csv&#39;</span> <span class="kw">WITH</span> csv <span class="kw">HEADER</span> DELIMITER <span class="kw">AS</span> <span class="st">&#39;,&#39;</span>;</span></code></pre></div>
+<p>Pour la troisième table, nous pourrions utiliser cette commande:</p>
+<h3 id="commande">Commande</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> species_acro (species_id <span class="dt">INT</span> <span class="kw">NOT</span> <span class="kw">NULL</span>, full_name <span class="dt">varchar</span>(<span class="dv">100</span>), short_name <span class="dt">varchar</span>(<span class="dv">25</span>));</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> species_acro <span class="kw">FROM</span> <span class="st">&#39;./data/species_acro.csv&#39;</span> <span class="kw">WITH</span> csv <span class="kw">HEADER</span> DELIMITER <span class="kw">AS</span> <span class="st">&#39;,&#39;</span>;</span></code></pre></div>
+<p>Par contre, nous allons utiliser DBeaver pour se familiariser avec
+l’interface.</p>
+<h2 id="importation-de-données-dans-dbeaver">Importation de données dans
+DBeaver</h2>
+<h4 id="importation-dune-table">Importation d’une table</h4>
+<p>Pour la troisième table, nous allons utiliser l’interface de DBeaver.
+Cliquez avec le bouton de gauche de la souris sur Tables dans
+Schemas&gt;public dans le menu de gauche, et sélectionnez Import Data.
+Cliquez sur Next et choisissez le fichier CSV species_acro.csv sur votre
+ordinateur. Dans Tables mapping, assurez-vous que le nom de la table, le
+nom des colonnes et le format des colonnes est adéquat. Après avoir
+cliqué sur Next à nouveau, cliquez sur Proceed.</p>
+<h2 id="références">RÉFÉRENCES</h2>
+<p><strong>Fonctions mathématiques et d’aggrégation (GROUP
+BY)</strong></p>
+<table>
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AVG()</td>
+<td>La moyenne</td>
+</tr>
+<tr class="even">
+<td>COUNT(DISTINCT COLUMN)</td>
+<td>Le nombre d’entrées distinctes dans une colonne</td>
+</tr>
+<tr class="odd">
+<td>COUNT()</td>
+<td>Le nombre de lignes</td>
+</tr>
+<tr class="even">
+<td>GROUP_CONCAT()</td>
+<td>Concaténation de multiples entrées textuelles</td>
+</tr>
+<tr class="odd">
+<td>MAX()</td>
+<td>Valeur maximale</td>
+</tr>
+<tr class="even">
+<td>MIN()</td>
+<td>Valeur minimale</td>
+</tr>
+<tr class="odd">
+<td>STDDEV_POP()</td>
+<td>Déviation standard de la population</td>
+</tr>
+<tr class="even">
+<td>STDDEV_SAMP()</td>
+<td>Déviation standard de l’échantillon</td>
+</tr>
+<tr class="odd">
+<td>SUM()</td>
+<td>Somme</td>
+</tr>
+<tr class="even">
+<td>VAR_POP()</td>
+<td>Variance de la population</td>
+</tr>
+<tr class="odd">
+<td>VAR_SAMP()</td>
+<td>Variance de l’échantillon</td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https://duckdb.org/docs/current/sql/functions/aggregates">Liste
+complète</a></p>
+<p><strong>Sélection conditionnelle pour utilisation dans une clause
+‘WHERE’</strong></p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">=</td>
+<td>Égal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;</td>
+<td>Plus grand que</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;</td>
+<td>Moins que</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=</td>
+<td>Plus grand que ou égal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt; =</td>
+<td>Plus petit que ou égal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;&gt; or !=</td>
+<td>Non-égalité</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LIKE</td>
+<td>Requête d’équivalence d’entrées textuelles (string matching)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ordre des opérations dans une requête ‘SELECT’</strong>:</p>
+<pre><code>SELECT columns FROM tables WHERE conditions JOIN GROUP BY columns HAVING condition ORDER BY columns;</code></pre>
+<h2 id="exercice-3---importer-des-donnees-dans-sqlite-avec-r">Exercice 3
+- Importer des donnees dans SQLite avec R</h2>
+<p>Installez d’abord le paquet <code>RSQLite</code> :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;RSQLite&#39;</span>)</span></code></pre></div>
+<p>Pour l’utiliser dans R, chargez le paquet <code>DBI</code> :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span></code></pre></div>
+<p>Ensuite, creez le fichier qui contiendra la base de donnees :</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mydb <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">&quot;QCBS_Workshop.sqlite&quot;</span>)</span></code></pre></div>
+<p>Definissez le dossier de travail vers l’emplacement ou vous avez
+telecharge les fichiers :</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&#39;C:/User/MyName/Workshop/&#39;</span>)</span></code></pre></div>
+<p>Vous pouvez maintenant charger les fichiers CSV dans R comme data
+frames :</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lakes <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&#39;lakes.csv&#39;</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>lakes_species <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&#39;lakes_species.csv&#39;</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>species_acro <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&#39;species_acro.csv&#39;</span>)</span></code></pre></div>
+<p>Puis charger ces data frames dans la base de donnees :</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(mydb, <span class="st">&quot;lakes&quot;</span>, lakes)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(mydb, <span class="st">&quot;lakes_species&quot;</span>, lakes_species)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(mydb, <span class="st">&quot;species_acro&quot;</span>, species_acro)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbListTables</span>(mydb)</span></code></pre></div>
+<p>Vous pourrez ensuite executer la plupart des requetes ci-dessous avec
+<code>dbGetQuery</code>. Par exemple :</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lake_prairies <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(mydb, <span class="st">&quot;SELECT * FROM lakes WHERE ecozone=&#39;Prairies&#39;&quot;</span>)</span></code></pre></div>
+<h2 id="exercice-4---commande-select">Exercice 4 - commande SELECT</h2>
+<p>Sélectionnez toutes les lignes de la table Lakes</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> lakes;</span></code></pre></div>
+<p>Si vous voulez voir toutes les colonnes</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>.<span class="kw">mode</span> box</span></code></pre></div>
+<p>Si vous voulez voir toutes les valeurs, par ligne</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>.<span class="kw">mode</span> line</span></code></pre></div>
+<p>Retourner au mode par défaut</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>.<span class="kw">mode</span> duckdb</span></code></pre></div>
+<p>Sélectionner toutes les lignes, mais n’afficher que les noms des lacs
+et la province</p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name, province <span class="kw">FROM</span> lakes;</span></code></pre></div>
+<p>Voir tous les noms de provinces différents</p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> province <span class="kw">from</span> lakes;</span></code></pre></div>
+<p>Voir tous le noms de provinces, utiliser une alias (renommer cette
+colonne dans les résultats) et trier par ordre descendant de nom.</p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> province <span class="kw">as</span> <span class="ot">&quot;province name&quot;</span> <span class="kw">FROM</span> lakes <span class="kw">ORDER</span> <span class="kw">BY</span> province <span class="kw">DESC</span>;</span></code></pre></div>
+<p>Voir l’année de naissance de chaque acteur</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> prenom, nom_de_famille, <span class="fu">EXTRACT</span>(<span class="dt">year</span> <span class="kw">from</span> date_naissance) <span class="kw">FROM</span> acteur;</span></code></pre></div>
+<p>Voir les initiales de chaque acteur</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> prenom, nom_de_famille, <span class="fu">concat</span>(<span class="fu">substr</span>(prenom,<span class="dv">1</span>,<span class="dv">1</span>),<span class="st">&#39; &#39;</span>,<span class="fu">substr</span>(nom_de_famille,<span class="dv">1</span>,<span class="dv">1</span>)) <span class="kw">as</span> initiales <span class="kw">FROM</span> acteur;</span></code></pre></div>
+<p>Sélectionner tous les lacs du Québec où la température annuelle
+moyenne est en bas de -5 C.</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name, tmean_an <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> province<span class="op">=</span><span class="st">&#39;QUEBEC&#39;</span> <span class="kw">AND</span> tmean_an<span class="op">&lt;-</span><span class="dv">5</span>;</span></code></pre></div>
+<p>Ou, pour compter le nombre de lacs</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">count</span>(<span class="op">*</span>) <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> province<span class="op">=</span><span class="st">&#39;QUEBEC&#39;</span> <span class="kw">AND</span> tmean_an<span class="op">&lt;-</span><span class="dv">5</span>;</span></code></pre></div>
+<strong>Question 1</strong> - Combien de lacs en Colombie-Britannique
+reçoivent plus de 3000 mm de précipitation (colonne totp_ann)?<br />
+
+<details>
+<summary>
+Réponse
+</summary>
+12
+</details>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">count</span>(<span class="op">*</span>) <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> totp_ann<span class="op">&gt;</span><span class="dv">3000</span> <span class="kw">AND</span> province<span class="op">=</span><span class="st">&#39;BRITISH COLUMBIA&#39;</span>;</span></code></pre></div>
+<strong>Question 2</strong> - Quel est l’altitude moyenne (colonne
+mean_ele) de tous les lacs dans l’écozone ‘Montane Cordillera’ (utilisez
+la fonction avg())?<br />
+
+<details>
+<summary>
+Réponse
+</summary>
+1364.36
+</details>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">avg</span>(mean_ele) <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> ecozone<span class="op">=</span><span class="st">&#39;Montane Cordillera&#39;</span>;</span></code></pre></div>
+<p>Note: Le symbole % est utilisé pour remplacer le début ou la fin
+d’une entrée textuelle.<br />
+Sélectionnez tous les noms de lacs qui contiennent le mot ‘Small’</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> lake_name <span class="kw">like</span> <span class="st">&#39;%Small%&#39;</span>;</span></code></pre></div>
+<p>Sélectionnez tous les noms de lacs qui contiennent le mot ‘Small’ et
+qui ne sont pas situés en Ontario</p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name, province </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> lakes</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lake_name <span class="kw">like</span> <span class="st">&#39;%Small%&#39;</span> <span class="kw">AND</span> province<span class="op">!=</span><span class="st">&#39;ONTARIO&#39;</span>;</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>autre possibilité:</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name, province </span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> lakes </span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lake_name <span class="kw">like</span> <span class="st">&#39;%Small%&#39;</span> <span class="kw">AND</span> province <span class="kw">NOT</span> <span class="kw">LIKE</span> <span class="st">&#39;ONTARIO&#39;</span>;</span></code></pre></div>
+<p><strong>Question 3</strong> - Quelle est la latitude maximale de tous
+les lacs dans un Ecozone dont le nom commence par ‘Taiga’</p>
+<details>
+<summary>
+Réponse
+</summary>
+68.8
+</details>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">max</span>(latitude) <span class="kw">FROM</span> lakes <span class="kw">WHERE</span> ecozone <span class="kw">LIKE</span> <span class="st">&#39;Taiga%&#39;</span>;</span></code></pre></div>
+<p><strong>Question 4</strong> - Combien d’espèces de Daphnia sont-elles
+listées dans la table species_acro?</p>
+<details>
+<summary>
+Réponse
+</summary>
+<p>17 (21 ont le mot ‘Daphnia’ quelque part dans leur nom)</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">count</span>(<span class="op">*</span>) <span class="kw">FROM</span> species_acro <span class="kw">WHERE</span> full_name <span class="kw">like</span> <span class="st">&#39;Daphnia%&#39;</span>;</span></code></pre></div>
+</details>
+<h2 id="exercice-5---regroupement">Exercice 5 - REGROUPEMENT</h2>
+<p>Calculez la température annuelle moyenne de tous les lacs dans chaque
+province</p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> province, <span class="fu">avg</span>(tmean_an) <span class="kw">as</span> mean_an_t</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span>  lakes</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> province;</span></code></pre></div>
+<p>Même table, mais triée par ordre de températures croissantes</p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> province, <span class="fu">avg</span>(tmean_an) <span class="kw">as</span> mean_an_t</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span>  lakes</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> province <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">avg</span>(tmean_an);</span></code></pre></div>
+<p><strong>Question 5</strong> - Quelle province a le lac ayant la
+température maximale (tmax_ann) la plus élevée?</p>
+<details>
+<summary>
+Réponse
+</summary>
+BRITISH COLUMBIA 14.60
+</details>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> province, <span class="fu">max</span>(tmax_ann) <span class="kw">as</span> max_temp <span class="kw">FROM</span> lakes <span class="kw">GROUP</span> <span class="kw">BY</span> province <span class="kw">ORDER</span> <span class="kw">BY</span> max_temp <span class="kw">DESC</span>;</span></code></pre></div>
+<p>Commande ‘UPDATE’</p>
+<p>Changer toutes les noms de province qui contiennent ‘NWT’, pour
+qu’ils aient le même nom (‘NWT’). - <strong>Faites attention, cette
+opération modifie la table!</strong></p>
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> lakes</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> province<span class="op">=</span><span class="st">&#39;NWT&#39;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> province <span class="kw">like</span> <span class="st">&#39;%NWT%&#39;</span>;</span></code></pre></div>
+<h2 id="exercice-6---travailler-avec-plusieurs-tables">Exercice 6 -
+Travailler avec plusieurs tables</h2>
+<p>Compter le nombre d’espèces dans chaque lac. Afficher le nom du lac
+et le nombre de chaque espèce.</p>
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lakes.lake_name, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> species_id) <span class="kw">as</span> num_species <span class="kw">FROM</span> lakes, lakes_species </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lakes.lake_id<span class="op">=</span>lakes_species.lake_id </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> lake_name, lakes.lake_id</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> num_species <span class="kw">DESC</span>;</span></code></pre></div>
+<p>Même requête, mais on limite l’affichage aux 20 premières
+entrées.</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> lake_name, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> species_id) <span class="kw">as</span> num_species <span class="kw">FROM</span> lakes, lakes_species </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lakes.lake_id<span class="op">=</span>lakes_species.lake_id </span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> lakes.lake_name, lakes.lake_id</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> num_species <span class="kw">DESC</span> <span class="kw">LIMIT</span> <span class="dv">20</span>;</span></code></pre></div>
+<p>Compter le nombre d’espèces dans chaque Ecozone et Ecoprovince.</p>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> ecozone, ecoprov, <span class="fu">COUNT</span>(species_id) <span class="kw">as</span> num_species <span class="kw">FROM</span> lakes, lakes_species </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lakes.lake_id<span class="op">=</span>lakes_species.lake_id </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> ecozone, ecoprov</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> ecozone, <span class="fu">COUNT</span>(species_id);</span></code></pre></div>
+<p><strong>Question 6</strong> Générer une table qui liste le nom
+complet de chaque espèce de Daphnia et le nombre de lacs où on retrouve
+cette espèce.</p>
+<details>
+<summary>
+Réponse
+</summary>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> full_name, <span class="fu">count</span>(<span class="kw">DISTINCT</span> b.lake_id) <span class="kw">as</span> cnt <span class="kw">FROM</span> species_acro a, lakes_species b <span class="kw">WHERE</span> full_name <span class="kw">like</span> <span class="st">&#39;Daphnia%&#39;</span> <span class="kw">AND</span> a.species_id<span class="op">=</span>b.species_id <span class="kw">GROUP</span> <span class="kw">BY</span> full_name;</span></code></pre></div>
+</details>
+<table>
+<thead>
+<tr class="header">
+<th>full_name</th>
+<th>cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daphnia pulex Leydig, 1860</td>
+<td>234</td>
+</tr>
+<tr class="even">
+<td>Daphnia similis Claus, 1876</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>Daphnia ambigua Scourfield, 1947</td>
+<td>59</td>
+</tr>
+<tr class="even">
+<td>Daphnia catawba Coker, 1926</td>
+<td>28</td>
+</tr>
+<tr class="odd">
+<td>Daphnia dubia Herick, 1883</td>
+<td>71</td>
+</tr>
+<tr class="even">
+<td>Daphnia galeata Sars, 1864</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>Daphnia longiremis G. O. Sars, 1862</td>
+<td>426</td>
+</tr>
+<tr class="even">
+<td>Daphnia longispina hyalina ceresiana</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Daphnia longispina hyalina microcephela</td>
+<td>27</td>
+</tr>
+<tr class="even">
+<td>Daphnia magna Straus, 1820</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>Daphnia mendotae Birge, 1918</td>
+<td>433</td>
+</tr>
+<tr class="even">
+<td>Daphnia middendorffiana Fischer, 1851</td>
+<td>117</td>
+</tr>
+<tr class="odd">
+<td>Daphnia parvula Fordyce, 1901</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>Daphnia pulicaria Forbes, 1893</td>
+<td>110</td>
+</tr>
+<tr class="odd">
+<td>Daphnia retrocurva Forbes, 1882</td>
+<td>324</td>
+</tr>
+<tr class="even">
+<td>Daphnia rosea G.O. Sars, 1862</td>
+<td>52</td>
+</tr>
+<tr class="odd">
+<td>Daphnia thorata Forbes, 1893</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercice-7---opérations-de-jointures-join">Exercice 7 -
+Opérations de jointures (JOIN)</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>JOIN (INNNER JOIN, CROSS JOIN)</td>
+<td>Garder toutes les combinaisons possibles des lignes des tables A et
+B.</td>
+</tr>
+<tr class="even">
+<td>LEFT JOIN</td>
+<td>Garder toutes les entrées de la table A, et joindre avec les entrées
+de B qui se trouvent également dans A (via un identificateur
+conjoint).</td>
+</tr>
+<tr class="odd">
+<td>RIGHT JOIN</td>
+<td>Garder toutes les entrées de la table B, et joindre avce les entrées
+de A qui se trouvent également dans B (via un identificateur
+conjoint).</td>
+</tr>
+<tr class="even">
+<td>OUTER JOIN</td>
+<td>Garder toutes les entrées des tables A et B</td>
+</tr>
+</tbody>
+</table>
+<p>Créer une liste de toutes les espèces présentes dans les lacs du
+Québec, avec les noms complets des espèces et le nombre de lacs dans
+lesquelles elles sont présentes.</p>
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> full_name, <span class="fu">count</span>(full_name) </span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> species_acro,lakes_species,lakes </span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> species_acro.species_id<span class="op">=</span>lakes_species.species_id <span class="kw">AND</span>  lakes.lake_id<span class="op">=</span>lakes_species.lake_id <span class="kw">AND</span> province<span class="op">=</span><span class="st">&#39;QUEBEC&#39;</span> </span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> full_name;</span></code></pre></div>
+<p>De façon équivalente…</p>
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> full_name, <span class="fu">count</span>(full_name) </span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> lakes</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> lakes_species <span class="kw">ON</span> (lakes.lake_id<span class="op">=</span>lakes_species.lake_id)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> species_acro <span class="kw">ON</span> (species_acro.species_id<span class="op">=</span>lakes_species.species_id)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> province<span class="op">=</span><span class="st">&#39;QUEBEC&#39;</span> </span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> full_name;</span></code></pre></div>
+<p>Pour toutes les combinaisons possibles de lacs se trouvant dans
+l’Ecoprovince Baffin Uplands, calculer la différence entre leurs
+températures annuelles moyennes.</p>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">concat</span>(a.lake_name,<span class="st">&#39;-&#39;</span>,b.lake_name) <span class="kw">as</span> lakes, a.tmean_an<span class="op">-</span>b.tmean_an <span class="kw">as</span> temp_diff </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> lakes a, lakes b </span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> a.ecoprov<span class="op">=</span><span class="st">&#39;Baffin Uplands&#39;</span> <span class="kw">AND</span> b.ecoprov<span class="op">=</span><span class="st">&#39;Baffin Uplands&#39;</span>;</span></code></pre></div>
+<h2 id="exercice-8---sous-requêtes-subqueries">Exercice 8 -
+Sous-requêtes (Subqueries)</h2>
+<p>Créez une table contenant le fréquence de chaque espèce dans les lacs
+au sud et au nord du 50e parallèle (latitude).</p>
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.species_id, count_50south, count_50north</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a> (<span class="kw">SELECT</span> species_id, <span class="fu">count</span>(d.species_id) <span class="kw">as</span> count_50south <span class="kw">FROM</span> lakes c, lakes_species d <span class="kw">WHERE</span> c.lake_id<span class="op">=</span>d.lake_id <span class="kw">AND</span> latitude<span class="op">&lt;=</span><span class="dv">50</span> <span class="kw">GROUP</span> <span class="kw">BY</span> species_id) a,</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a> (<span class="kw">SELECT</span> species_id, <span class="fu">count</span>(f.species_id) <span class="kw">as</span> count_50north <span class="kw">FROM</span> lakes e, lakes_species f <span class="kw">WHERE</span> e.lake_id<span class="op">=</span>f.lake_id <span class="kw">AND</span> latitude<span class="op">&gt;</span><span class="dv">50</span> <span class="kw">GROUP</span> <span class="kw">BY</span> species_id) b </span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> a.species_id<span class="op">=</span>b.species_id;</span></code></pre></div>
+<p><strong>Question 7</strong> En utilisant une sous-requête, trouvez
+l’élévation moyenne (colonne MEAN_ELE) des lacs dans lesquels au moins
+une espèce de Daphnia est présente.</p>
+<details>
+<summary>
+Réponse
+</summary>
+<p><strong>Réponse:</strong> 474.627172</p>
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">avg</span>(mean_ele) <span class="kw">FROM</span> (<span class="kw">SELECT</span> <span class="kw">DISTINCT</span> a.lake_id, mean_ele</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> lakes a,species_acro b,lakes_species c <span class="kw">WHERE</span> b.full_name <span class="kw">like</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;Daphnia%&#39;</span> <span class="kw">AND</span> a.lake_id<span class="op">=</span>c.lake_id <span class="kw">AND</span> c.species_id<span class="op">=</span>b.species_id <span class="kw">ORDER</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="kw">BY</span> a.lake_id) d;</span></code></pre></div>
+</details>
+<h2
+id="exercice-9---travailler-avec-des-fichiers-locaux-ou-à-distance">Exercice
+9 - Travailler avec des fichiers locaux ou à distance</h2>
+<p>On va créer une VIEW Pour se connecter au fichier d’observation dans
+l’Atlas de Biodiversité Québec</p>
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>INSTALL spatial;</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>LOAD spatial;</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>INSTALL httpfs;</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>LOAD httpfs;</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">VIEW</span> atlas <span class="kw">AS</span> <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> read_parquet(<span class="st">&#39;https://object-arbutus.cloud.computecanada.ca/bq-io/atlas/parquet/atlas_public_2026-05-04.parquet&#39;</span>);</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE atlas;</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>``</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>Extraire le nombre d<span class="st">&#39;observations dans Atlas par royaume. </span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="st">```sql</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT kingdom, count(*) cnt FROM atlas GROUP BY kingdom ORDER BY cnt DESC;</span></span></code></pre></div>
+<p>Extraire toutes les observations d’harfang des neigs</p>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> atlas <span class="kw">WHERE</span> valid_scientific_name<span class="op">=</span><span class="st">&#39;Bubo scandiacus&#39;</span>;</span></code></pre></div>
+<h1 id="lier-r-avec-duckdb">Lier R avec DuckDB</h1>
+<p>Dans R: lors de la première utilisation seulement :</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;duckdb&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckdb)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(duckdb<span class="sc">::</span><span class="fu">duckdb</span>(), <span class="at">dbdir =</span> <span class="st">&quot;mydb.duckdb&quot;</span>)</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>lakes <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(con,<span class="st">&#39;SELECT * FROM lakes&#39;</span>);</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>lakesqc <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(con,<span class="st">&quot;SELECT * FROM lakes WHERE province=&#39;QUEBEC&#39;&quot;</span>)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(lakes<span class="sc">$</span>tmean_an)</span></code></pre></div>
+<h2 id="utiliser-le-package-dplyrdbdplyr">Utiliser le package
+dplyr/dbdplyr</h2>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>lakes <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="st">&quot;lakes&quot;</span>) <span class="co"># Define lakes table</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>lakes_qc<span class="ot">&lt;-</span><span class="fu">filter</span>(lakes, province  <span class="sc">==</span> <span class="st">&#39;QUEBEC&#39;</span>) <span class="co"># Select lakes in Quebec</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>prov_tmean<span class="ot">&lt;-</span><span class="fu">summarise</span>(<span class="fu">group_by</span>(lakes, province), <span class="fu">mean</span>(tmean_an)) <span class="co"># Mean annual temperature per province</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>prov_tmean<span class="ot">=</span><span class="fu">collect</span>(prov_tmean) <span class="co"># Transfer result to standard R data frame</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>lakes_qc2<span class="ot">&lt;-</span><span class="fu">tbl</span>(con, <span class="fu">sql</span>(<span class="st">&quot;SELECT * FROM lakes WHERE province=&#39;QUEBEC&#39;&quot;</span>)) <span class="co">#Perform any SQL statement</span></span></code></pre></div>
+<h2 id="charger-une-table-comme-un-objet-spatial-sf">Charger une table
+comme un objet spatial sf</h2>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;duckspatial&#39;</span>)</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckspatial)</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>bubo <span class="ot">&lt;-</span> <span class="fu">ddbs_read_table</span>(conn, <span class="st">&quot;atlas&quot;</span>, <span class="at">clauses =</span> <span class="st">&quot;WHERE valid_scientific_name=&#39;Bubo scandiacus&#39;&quot;</span>)</span></code></pre></div>
+<p>bubo est un objet spatial sf. Vous pouvez donc le visualiser sur une
+carte.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bubo[<span class="st">&#39;dataset_name&#39;</span>])</span></code></pre></div>
+<h1 id="utilisation-de-linterface-libreoffice-base">Utilisation de
+l’interface LibreOffice Base</h1>
+<h2 id="créer-des-tables-et-des-formulaires">Créer des tables et des
+formulaires</h2>
+<p>On vous donne un jeu de données dans le format suivant</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parcelle 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Espèce</td>
+</tr>
+<tr class="even">
+<td>Acer rubrum</td>
+</tr>
+<tr class="odd">
+<td>Acer saccharum</td>
+</tr>
+<tr class="even">
+<td>Fagus grandifolia</td>
+</tr>
+<tr class="odd">
+<td>Fagus grandifolia</td>
+</tr>
+<tr class="even">
+<td>Fraxinus americana</td>
+</tr>
+<tr class="odd">
+<td>Parcelle 2</td>
+</tr>
+<tr class="even">
+<td>Quercus rubra</td>
+</tr>
+<tr class="odd">
+<td>Fraxinus americana</td>
+</tr>
+<tr class="even">
+<td>Fraxinus americana</td>
+</tr>
+<tr class="odd">
+<td>Carpinus caroliana</td>
+</tr>
+</tbody>
+</table>
+<p>On vous dit que des milliers d’autres arbres devront être entrés.
+Comment pensez-vous construire une base de données pour entreposer cette
+information?</p>
+<p>Créez la table suivante avec la commande ‘CREATE TABLE’ dans DuckDB.
+Spécifiez le champs espece_id comme la clé primaire avec le type de
+fichier SERIAL PRIMARY KEY. Vous pouvez ensuite remplir la table avec
+les valeurs dans Libreoffice Base. Nom de la table: especes_arbres</p>
+<table>
+<thead>
+<tr class="header">
+<th>espece_id</th>
+<th>nom_espece</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Quercus rubra</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Acer saccharum</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Acer rubrum</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Fagus grandifolia</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Fraxinus americana</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Carpinus caroliana</td>
+</tr>
+</tbody>
+</table>
+<p>Créez cette table dans DuckDB et créez un formulaire pour la remplir
+avec le mode ébauche de formulaire, avec des menus déroulants pour
+sélectionner les espèces et des boutons radios pour la santé des arbres.
+arbre_id est la clé primaire. Nom de la table: parcelles_arbres</p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>parcelle_id</th>
+<th>arbre_id</th>
+<th>espece_id</th>
+<th>dhp</th>
+<th>etat</th>
+<th>commentaires</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>12.4</td>
+<td>vivant</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>25.3</td>
+<td>vivant</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>14.1</td>
+<td>mort</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>66.0</td>
+<td>vivant</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>5</td>
+<td>4</td>
+<td>30.1</td>
+<td>vivant</td>
+<td>écorce endommagée</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>40.1</td>
+<td>vivant</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>7</td>
+<td>5</td>
+<td>64.2</td>
+<td>vivant</td>
+<td>gros trou dans le tronc</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>5</td>
+<td>53.1</td>
+<td>mort</td>
+<td>déraciné</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>9</td>
+<td>6</td>
+<td>10.3</td>
+<td>vivant</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -211,7 +211,7 @@ Pour la troisième table, nous allons utiliser l'interface de DBeaver. Cliquez a
 | VAR_POP() | Variance de la population |
 | VAR_SAMP() | Variance de l'échantillon |
 
-[Liste complète](http://www.DuckDB.org/docs/9.3/static/functions-aggregate.html)
+[Liste complète](https://duckdb.org/docs/current/sql/functions/aggregates)
 
 **Sélection conditionnelle pour utilisation dans une clause 'WHERE'**
 
