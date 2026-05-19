@@ -1,21 +1,5 @@
 # Introduction à la gestion des bases de données avec des logiciels libres
 
-Atelier offert par [Guillaume
-Larocque](http://qcbs.ca/fr/ressources/professionnel-de-recherche/professionnels-de-recherche-guillaume-larocque-phd/),
-professionnel de recherche au CSBQ.
-
-## Presentation
-
-[Lien vers la présentation
-Prezi](http://prezi.com/tcks6siw8q-u/introduction-a-la-gestion-des-bases-de-donnees-avec-des-logiciels-libres/)
-
-
-## Ressources utiles
-
-- [DuckDB Reference Manual](https://duckdb.org/docs/current/)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html)
-
-
 ## Accéder à DuckDB
 
 **Sur Windows et Mac**:
