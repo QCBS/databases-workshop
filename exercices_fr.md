@@ -32,7 +32,9 @@ dans un terminal.
 format LibreOffice
 Calc)](http://qcbs.ca/wp-content/uploads/2012/10/Crustacean_plankton_Canada.ods)
 
-  
+[Format XLSX](https://wiki.qcbs.ca/_media/crustacean_plankton_canada.xlsx)
+
+
   
   
 # Exercices DuckDB
@@ -121,8 +123,10 @@ l'entrée texte.
 
 ## Exercice 2 - Importer des données dans DuckDB
 
-Téléchargez les fichiers suivants sur votre ordinateur (utilisez le
-bouton de droite pour cliquer sur le lien... sauvergarder sous).
+Les fichiers CSV son dans le dossier [data](/data) de ce dépôt Github. 
+
+Si vous n'avez pas cloné le dépôt, téléchargez les fichiers suivants sur votre ordinateur 
+(utilisez le bouton de droite pour cliquer sur le lien... sauvergarder sous).
 [Lakes.csv](./data/lakes.csv), [species_acro.csv](./data/species_acro.csv),
 [lakes_species.csv](./data/lakes_species.csv)
 
@@ -234,7 +238,7 @@ Ensuite, creez le fichier qui contiendra la base de donnees :
 mydb <- dbConnect(RSQLite::SQLite(), "QCBS_Workshop.sqlite")
 ```
 
-Definissez le dossier de travail vers l'emplacement ou vous avez telecharge les fichiers :
+Definissez le dossier de travail vers l'emplacement ou vous avez téléchargé les fichiers :
 
 ```r
 setwd('C:/User/MyName/Workshop/')
@@ -248,7 +252,7 @@ lakes_species <- read.csv('lakes_species.csv')
 species_acro <- read.csv('species_acro.csv')
 ```
 
-Puis charger ces data frames dans la base de donnees :
+Puis charger ces data frames dans la base de données :
 
 ```r
 dbWriteTable(mydb, "lakes", lakes)
@@ -257,7 +261,7 @@ dbWriteTable(mydb, "species_acro", species_acro)
 dbListTables(mydb)
 ```
 
-Vous pourrez ensuite executer la plupart des requetes ci-dessous avec `dbGetQuery`. Par exemple :
+Vous pourrez ensuite executer la plupart des requêtes ci-dessous avec `dbGetQuery`. Par exemple :
 
 ```r
 lake_prairies <- dbGetQuery(mydb, "SELECT * FROM lakes WHERE ecozone='Prairies'")
