@@ -1,4 +1,4 @@
-### Atelier du CSBQ sur la gestion des bases de données avec des logiciels libres
+# Atelier du CSBQ sur la gestion des bases de données avec des logiciels libres
 
 Atelier offert par [Guillaume
 Larocque](http://qcbs.ca/fr/ressources/professionnel-de-recherche/professionnels-de-recherche-guillaume-larocque-phd/),
