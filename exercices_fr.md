@@ -602,6 +602,19 @@ Extraire toutes les observations d'harfang des neigs
 SELECT * FROM atlas WHERE valid_scientific_name='Bubo scandiacus';
 ```
 
+Se connecter à GBIF
+
+```sql
+SET s3_region='us-east-1';SET s3_use_ssl=false;
+CREATE OR REPLACE VIEW gbif AS SELECT * FROM read_parquet('s3://gbif-open-data-us-east-1/occurrence/2026-04-01/occurrence.parquet/*')
+```
+
+Extraire le nombre d'observations dans GBIF par royaume. Cette requête peut prendre quelques minutes.
+
+```sql
+SELECT kingdom, count(*) cnt FROM gbif GROUP BY kingdom ORDER BY cnt DESC;
+```
+
 # Lier R avec DuckDB
 
 Dans R: lors de la première utilisation seulement :
